@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstdlib> // Necesario para rand() y srand()
+#include <ctime>   // Necesario para time()
+
+int main() {
+    // Inicializar la semilla con el tiempo actual
+    srand(time(NULL));
+
+    // Generar un número aleatorio entre 0 y RAND_MAX
+    int num = rand();
+    std::cout << "Numero aleatorio: " << num << std::endl;
+
+    // Generar un número en un rango específico (ej: 1 al 10)
+    int rango = 1 + rand() % 10;
+    std::cout << "Numero entre 1 y 10: " << rango << std::endl;
+
+    return 0;
+}
